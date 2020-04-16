@@ -1,0 +1,31 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-style: dashed;
+  background: black;
+  box-shadow: 3px 3px 3px black;
+  position: absolute;
+}
+
+.modal .modal-dialog {
+  width: 600px;
+  height: 600px;
+}
+.modal .modal-dialog .modal-content {
+  box-shadow: 3px 3px 3px black;
+}
+.modal .modal-dialog .modal-content .modal-body {
+  box-shadow: 3px 3px 3px black;
+}
+.modal .modal-dialog .modal-content .modal-body .col-md-8 .myBlock {
+  background: #985f0d;
+  box-shadow: 3px 3px 3px black;
+}
+
+/*# sourceMappingURL=main.css.map */
