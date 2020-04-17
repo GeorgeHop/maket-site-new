@@ -365,10 +365,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
-
-        // INITIATE THE FOOTER
         siteFooter();
-        // COULD BE SIMPLIFIED FOR THIS PEN BUT I WANT TO MAKE IT AS EASY TO PUT INTO YOUR SITE AS POSSIBLE
         $(window).resize(function() {
             siteFooter();
         });
@@ -460,19 +457,15 @@
     });
     jQuery(function($) {
 
-        // Function which adds the 'animated' class to any '.animatable' in view
         var doAnimations = function() {
-
-            // Calc current offset and get all animatables
+            
             var offset = $(window).scrollTop() + $(window).height(),
                 $animatables = $('.animatable');
 
-            // Unbind scroll handler if we have no animatables
             if ($animatables.length == 0) {
                 $(window).off('scroll', doAnimations);
             }
-
-            // Check all animatables and animate them if necessary
+            
             $animatables.each(function(i) {
                 var $animatable = $(this);
                 if (($animatable.offset().top + $animatable.height() - 20) < offset) {
@@ -482,7 +475,6 @@
 
         };
 
-        // Hook doAnimations on scroll, and trigger a scroll
         $(window).on('scroll', doAnimations);
         $(window).trigger('scroll');
 
